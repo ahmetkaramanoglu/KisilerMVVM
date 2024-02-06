@@ -16,6 +16,13 @@
 		E302D4352B72D8B30097B536 /* KisilerMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4342B72D8B30097B536 /* KisilerMVVMTests.swift */; };
 		E302D43F2B72D8B30097B536 /* KisilerMVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D43E2B72D8B30097B536 /* KisilerMVVMUITests.swift */; };
 		E302D4412B72D8B30097B536 /* KisilerMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4402B72D8B30097B536 /* KisilerMVVMUITestsLaunchTests.swift */; };
+		E302D4532B72DA990097B536 /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4522B72DA990097B536 /* Kisiler.swift */; };
+		E302D4552B72DAF40097B536 /* KisilerModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4542B72DAF40097B536 /* KisilerModelView.swift */; };
+		E302D4572B72DB120097B536 /* KisilerModelViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4562B72DB120097B536 /* KisilerModelViewProtocol.swift */; };
+		E302D4592B72DB920097B536 /* KisilerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4582B72DB920097B536 /* KisilerServiceProtocol.swift */; };
+		E302D45B2B72DBD30097B536 /* KisilerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D45A2B72DBD30097B536 /* KisilerService.swift */; };
+		E302D45E2B72DD320097B536 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E302D45D2B72DD320097B536 /* Alamofire */; };
+		E302D4602B72EA790097B536 /* KisiCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D45F2B72EA790097B536 /* KisiCevap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,12 @@
 		E302D43A2B72D8B30097B536 /* KisilerMVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KisilerMVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E302D43E2B72D8B30097B536 /* KisilerMVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerMVVMUITests.swift; sourceTree = "<group>"; };
 		E302D4402B72D8B30097B536 /* KisilerMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E302D4522B72DA990097B536 /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		E302D4542B72DAF40097B536 /* KisilerModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerModelView.swift; sourceTree = "<group>"; };
+		E302D4562B72DB120097B536 /* KisilerModelViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerModelViewProtocol.swift; sourceTree = "<group>"; };
+		E302D4582B72DB920097B536 /* KisilerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerServiceProtocol.swift; sourceTree = "<group>"; };
+		E302D45A2B72DBD30097B536 /* KisilerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerService.swift; sourceTree = "<group>"; };
+		E302D45F2B72EA790097B536 /* KisiCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiCevap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E302D45E2B72DD320097B536 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +113,11 @@
 		E302D41C2B72D8AF0097B536 /* KisilerMVVM */ = {
 			isa = PBXGroup;
 			children = (
-				E302D41D2B72D8AF0097B536 /* AppDelegate.swift */,
-				E302D41F2B72D8AF0097B536 /* SceneDelegate.swift */,
-				E302D4212B72D8AF0097B536 /* ViewController.swift */,
+				E302D4502B72D8DD0097B536 /* Service */,
+				E302D44F2B72D8D10097B536 /* View */,
+				E302D44E2B72D8C70097B536 /* ModelView */,
+				E302D44D2B72D8BA0097B536 /* Model */,
+				E302D4512B72D8E90097B536 /* Core */,
 				E302D4232B72D8AF0097B536 /* Main.storyboard */,
 				E302D4262B72D8B30097B536 /* Assets.xcassets */,
 				E302D4282B72D8B30097B536 /* LaunchScreen.storyboard */,
@@ -127,6 +143,50 @@
 			path = KisilerMVVMUITests;
 			sourceTree = "<group>";
 		};
+		E302D44D2B72D8BA0097B536 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4522B72DA990097B536 /* Kisiler.swift */,
+				E302D45F2B72EA790097B536 /* KisiCevap.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E302D44E2B72D8C70097B536 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4542B72DAF40097B536 /* KisilerModelView.swift */,
+				E302D4562B72DB120097B536 /* KisilerModelViewProtocol.swift */,
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		E302D44F2B72D8D10097B536 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4212B72D8AF0097B536 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E302D4502B72D8DD0097B536 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4582B72DB920097B536 /* KisilerServiceProtocol.swift */,
+				E302D45A2B72DBD30097B536 /* KisilerService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E302D4512B72D8E90097B536 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E302D41D2B72D8AF0097B536 /* AppDelegate.swift */,
+				E302D41F2B72D8AF0097B536 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +203,9 @@
 			dependencies = (
 			);
 			name = KisilerMVVM;
+			packageProductDependencies = (
+				E302D45D2B72DD320097B536 /* Alamofire */,
+			);
 			productName = KisilerMVVM;
 			productReference = E302D41A2B72D8AF0097B536 /* KisilerMVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +278,9 @@
 				Base,
 			);
 			mainGroup = E302D4112B72D8AF0097B536;
+			packageReferences = (
+				E302D45C2B72DD320097B536 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E302D41B2B72D8AF0097B536 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +324,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E302D4592B72DB920097B536 /* KisilerServiceProtocol.swift in Sources */,
+				E302D4572B72DB120097B536 /* KisilerModelViewProtocol.swift in Sources */,
 				E302D4222B72D8AF0097B536 /* ViewController.swift in Sources */,
+				E302D45B2B72DBD30097B536 /* KisilerService.swift in Sources */,
+				E302D4602B72EA790097B536 /* KisiCevap.swift in Sources */,
 				E302D41E2B72D8AF0097B536 /* AppDelegate.swift in Sources */,
+				E302D4552B72DAF40097B536 /* KisilerModelView.swift in Sources */,
 				E302D4202B72D8AF0097B536 /* SceneDelegate.swift in Sources */,
+				E302D4532B72DA990097B536 /* Kisiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +674,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E302D45C2B72DD320097B536 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E302D45D2B72DD320097B536 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E302D45C2B72DD320097B536 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E302D4122B72D8AF0097B536 /* Project object */;
 }

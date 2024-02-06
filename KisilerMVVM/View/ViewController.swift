@@ -8,10 +8,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var service: KisilerService?
+    var modelView: KisilerModelView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        service = KisilerService()
+        modelView = KisilerModelView(service: service!)
+        
+        modelView?.load()
     }
 
 
