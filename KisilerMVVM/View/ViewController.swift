@@ -9,12 +9,15 @@ import UIKit
 
 protocol KisilerOutPut {
     func verileriKaydet(value: [Kisiler])
+    func isIndicatorLoading(isLoading: Bool)
 }
 
 class ViewController: UIViewController {
     
     
     var myArray = [Kisiler]()
+    
+    var isIndicatorLoading = false
     
     @IBOutlet weak var myTableView: UITableView!
     
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         
         myTableView.dataSource = self
         myTableView.delegate = self
+        
+        
     }
 }
 
@@ -42,8 +47,12 @@ extension ViewController: KisilerOutPut {
         myArray = value
         myTableView.reloadData()
     }
-    
-    
+
+    func isIndicatorLoading(isLoading: Bool) {
+        
+        isIndicatorLoading = isLoading
+        
+    }
 }
 
 

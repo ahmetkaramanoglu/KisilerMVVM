@@ -40,7 +40,7 @@ final class KisilerModelView: KisilerModelViewProtocol {
             self.resultsKisiler = resp ?? []
             
             self.kisilerOutput?.verileriKaydet(value: self.resultsKisiler ?? [])
-            print("Result kisiler model view 0. elemani\(self.resultsKisiler[0])")
+            
         })
         
     }
@@ -51,12 +51,8 @@ final class KisilerModelView: KisilerModelViewProtocol {
     
     func changeLoading() {
         isLoading = !isLoading
-        if isLoading {
-            print("Ekran yukleniyor.")
-        }else{
-            print("Ekran yuklendi.")
-        }
-        
+        kisilerOutput?.isIndicatorLoading(isLoading: isLoading)
+
     }
     
     
