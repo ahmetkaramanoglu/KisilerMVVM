@@ -30,40 +30,37 @@ final class KisilerService: KisilerServiceProtocol {
     
     
     func fetchById(at index: Int) {
+        //once verinin varligi kontrol edilmeli.
+        //eger veri varsa ekrani loading'e sokmaliyiz.
+        //acaba tum verileri cekmemiz gerekiyor mu oncesinde? hayir direkt gidip api'ye index gonderip cekeceksin.
+        
         
     }
     
+    //eger escaping yapmasaydik biz verimizi gonderemezdik. cunku escaping demek fonk bitse bile sonucu hemen gelmeyen demek.
     func fetchKisiler(response: @escaping ([Kisiler]?) -> Void) {
  
-        AF.request(KisilerServiceEndPoint.getTumKisilerPath()).responseDecodable(of: KisiCevap.self, completionHandler: { (model) in
+
+        AF.request(KisilerServiceEndPoint.getTumKisilerPath(), method: .get).response { resp in
             
-            guard let data = model.value else {
-                response(nil)
-                return
+            guard let data = resp.data else { return }
+
+            do {
+                let cevap = try JSONDecoder().decode(KisiCevap.self, from: data)
+                if let kisiler = cevap.kisiler {
+
+                    for kisi in kisiler {
+
+                        print("kisi ad: \(kisi.kisi_ad!)")
+                    }
+                    response(cevap.kisiler)
+                }
+                
+            }catch {
+                print(error)
             }
-            response(data.kisiler)
             
-        })
-    
-        
-//        AF.request(KisilerServiceEndPoint.getTumKisilerPath(), method: .get).response { response in
-//            print("response cevap \(response.response!)")
-//            guard let data = response.data else { return }
-//
-//            do {
-//                let cevap = try JSONDecoder().decode(KisiCevap.self, from: data)
-//                if let kisiler = cevap.kisiler {
-//
-//                    for kisi in kisiler {
-//
-//                        print("karakter ad: \(kisi.kisi_ad!)")
-//                    }
-//
-//                }
-//            }catch {
-//                print(error.localizedDescription)
-//            }
-//        }
+        }
         
         
         

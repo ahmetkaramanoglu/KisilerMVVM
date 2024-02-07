@@ -15,4 +15,7 @@ protocol KisilerModelViewProtocol {
     
     func changeLoading()
     
+    var kisilerOutput: KisilerOutPut? { get }
+    func setDelegate(output: KisilerOutPut)
+    
 }

@@ -11,25 +11,36 @@ import Foundation
 
 
 final class KisilerModelView: KisilerModelViewProtocol {
+    var kisilerOutput: KisilerOutPut?
+    
+    func setDelegate(output: KisilerOutPut) {
+        self.kisilerOutput = output
+    }
+    
+    
+    
+    
     
     private var isLoading = false
     private var service: KisilerServiceProtocol
     
-    //bunu neden burda olusturduk? Cunku sen zaten serviste fetch ediyorsun. Bir daha niye orda dizi olusturup esitleyesin. servis sadece servis islerini yapsin. Sen burda bunu fetch data icinde zaten esitleyip veriyi vereceksin.
-    private var resultsKisiler: [Kisiler] = []
+    
+     var resultsKisiler: [Kisiler] = []
     
     init(service: KisilerServiceProtocol) {
         self.service = service
+        
     }
     
     func load() {
         //yuklenirken bir indicator ile yukleniyor ekrani yapalim.
         changeLoading()
-        
-        //Internet baglantisi yapilacak. Bunun icin bir servise ihtiyacimiz var.
         service.fetchKisiler(response: { resp in
             self.changeLoading()
             self.resultsKisiler = resp ?? []
+            
+            self.kisilerOutput?.verileriKaydet(value: self.resultsKisiler ?? [])
+            print("Result kisiler model view 0. elemani\(self.resultsKisiler[0])")
         })
         
     }
