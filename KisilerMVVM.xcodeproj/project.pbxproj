@@ -23,6 +23,12 @@
 		E302D45B2B72DBD30097B536 /* KisilerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D45A2B72DBD30097B536 /* KisilerService.swift */; };
 		E302D45E2B72DD320097B536 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E302D45D2B72DD320097B536 /* Alamofire */; };
 		E302D4602B72EA790097B536 /* KisiCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D45F2B72EA790097B536 /* KisiCevap.swift */; };
+		E302D4642B73F0DE0097B536 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4632B73F0DE0097B536 /* DetailViewController.swift */; };
+		E302D46A2B73F15B0097B536 /* KisilerDetailModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4692B73F15B0097B536 /* KisilerDetailModelView.swift */; };
+		E302D46C2B73F1770097B536 /* KisilerDetailModelViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D46B2B73F1770097B536 /* KisilerDetailModelViewProtocol.swift */; };
+		E302D46E2B73F1A70097B536 /* KisilerDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D46D2B73F1A70097B536 /* KisilerDetail.swift */; };
+		E302D4702B73F4DA0097B536 /* KisilerDetailStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E302D46F2B73F4DA0097B536 /* KisilerDetailStoryBoard.storyboard */; };
+		E302D4722B74073F0097B536 /* KisilerDetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E302D4712B74073F0097B536 /* KisilerDetailBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		E302D4582B72DB920097B536 /* KisilerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerServiceProtocol.swift; sourceTree = "<group>"; };
 		E302D45A2B72DBD30097B536 /* KisilerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerService.swift; sourceTree = "<group>"; };
 		E302D45F2B72EA790097B536 /* KisiCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiCevap.swift; sourceTree = "<group>"; };
+		E302D4632B73F0DE0097B536 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E302D4692B73F15B0097B536 /* KisilerDetailModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDetailModelView.swift; sourceTree = "<group>"; };
+		E302D46B2B73F1770097B536 /* KisilerDetailModelViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDetailModelViewProtocol.swift; sourceTree = "<group>"; };
+		E302D46D2B73F1A70097B536 /* KisilerDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDetail.swift; sourceTree = "<group>"; };
+		E302D46F2B73F4DA0097B536 /* KisilerDetailStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = KisilerDetailStoryBoard.storyboard; sourceTree = "<group>"; };
+		E302D4712B74073F0097B536 /* KisilerDetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDetailBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +130,6 @@
 				E302D44E2B72D8C70097B536 /* ModelView */,
 				E302D44D2B72D8BA0097B536 /* Model */,
 				E302D4512B72D8E90097B536 /* Core */,
-				E302D4232B72D8AF0097B536 /* Main.storyboard */,
 				E302D4262B72D8B30097B536 /* Assets.xcassets */,
 				E302D4282B72D8B30097B536 /* LaunchScreen.storyboard */,
 				E302D42B2B72D8B30097B536 /* Info.plist */,
@@ -146,8 +157,8 @@
 		E302D44D2B72D8BA0097B536 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E302D4522B72DA990097B536 /* Kisiler.swift */,
-				E302D45F2B72EA790097B536 /* KisiCevap.swift */,
+				E302D4682B73F1390097B536 /* KisilerDetail */,
+				E302D4672B73F11F0097B536 /* Kisiler */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -155,8 +166,8 @@
 		E302D44E2B72D8C70097B536 /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
-				E302D4542B72DAF40097B536 /* KisilerModelView.swift */,
-				E302D4562B72DB120097B536 /* KisilerModelViewProtocol.swift */,
+				E302D4662B73F10A0097B536 /* KisilerDetail */,
+				E302D4652B73F0FB0097B536 /* Kisiler */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -164,7 +175,8 @@
 		E302D44F2B72D8D10097B536 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E302D4212B72D8AF0097B536 /* ViewController.swift */,
+				E302D4742B740CF00097B536 /* KisilerDetail */,
+				E302D4732B740CE50097B536 /* Kisiler */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +197,60 @@
 				E302D41F2B72D8AF0097B536 /* SceneDelegate.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		E302D4652B73F0FB0097B536 /* Kisiler */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4542B72DAF40097B536 /* KisilerModelView.swift */,
+				E302D4562B72DB120097B536 /* KisilerModelViewProtocol.swift */,
+			);
+			path = Kisiler;
+			sourceTree = "<group>";
+		};
+		E302D4662B73F10A0097B536 /* KisilerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4692B73F15B0097B536 /* KisilerDetailModelView.swift */,
+				E302D46B2B73F1770097B536 /* KisilerDetailModelViewProtocol.swift */,
+				E302D4712B74073F0097B536 /* KisilerDetailBuilder.swift */,
+			);
+			path = KisilerDetail;
+			sourceTree = "<group>";
+		};
+		E302D4672B73F11F0097B536 /* Kisiler */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4522B72DA990097B536 /* Kisiler.swift */,
+				E302D45F2B72EA790097B536 /* KisiCevap.swift */,
+			);
+			path = Kisiler;
+			sourceTree = "<group>";
+		};
+		E302D4682B73F1390097B536 /* KisilerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E302D46D2B73F1A70097B536 /* KisilerDetail.swift */,
+			);
+			path = KisilerDetail;
+			sourceTree = "<group>";
+		};
+		E302D4732B740CE50097B536 /* Kisiler */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4212B72D8AF0097B536 /* ViewController.swift */,
+				E302D4232B72D8AF0097B536 /* Main.storyboard */,
+			);
+			path = Kisiler;
+			sourceTree = "<group>";
+		};
+		E302D4742B740CF00097B536 /* KisilerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E302D4632B73F0DE0097B536 /* DetailViewController.swift */,
+				E302D46F2B73F4DA0097B536 /* KisilerDetailStoryBoard.storyboard */,
+			);
+			path = KisilerDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E302D4702B73F4DA0097B536 /* KisilerDetailStoryBoard.storyboard in Resources */,
 				E302D42A2B72D8B30097B536 /* LaunchScreen.storyboard in Resources */,
 				E302D4272B72D8B30097B536 /* Assets.xcassets in Resources */,
 				E302D4252B72D8AF0097B536 /* Main.storyboard in Resources */,
@@ -324,13 +391,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E302D46A2B73F15B0097B536 /* KisilerDetailModelView.swift in Sources */,
+				E302D46E2B73F1A70097B536 /* KisilerDetail.swift in Sources */,
 				E302D4592B72DB920097B536 /* KisilerServiceProtocol.swift in Sources */,
 				E302D4572B72DB120097B536 /* KisilerModelViewProtocol.swift in Sources */,
 				E302D4222B72D8AF0097B536 /* ViewController.swift in Sources */,
 				E302D45B2B72DBD30097B536 /* KisilerService.swift in Sources */,
 				E302D4602B72EA790097B536 /* KisiCevap.swift in Sources */,
 				E302D41E2B72D8AF0097B536 /* AppDelegate.swift in Sources */,
+				E302D4722B74073F0097B536 /* KisilerDetailBuilder.swift in Sources */,
+				E302D46C2B73F1770097B536 /* KisilerDetailModelViewProtocol.swift in Sources */,
 				E302D4552B72DAF40097B536 /* KisilerModelView.swift in Sources */,
+				E302D4642B73F0DE0097B536 /* DetailViewController.swift in Sources */,
 				E302D4202B72D8AF0097B536 /* SceneDelegate.swift in Sources */,
 				E302D4532B72DA990097B536 /* Kisiler.swift in Sources */,
 			);
