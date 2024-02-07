@@ -32,7 +32,7 @@ final class KisilerService: KisilerServiceProtocol {
     func fetchById(at index: Int) {
         //once verinin varligi kontrol edilmeli.
         //eger veri varsa ekrani loading'e sokmaliyiz.
-        //acaba tum verileri cekmemiz gerekiyor mu oncesinde? hayir direkt gidip api'ye index gonderip cekeceksin.
+        //acaba tum verileri cekmemiz gerekiyor mu oncesinde? direkt gidip api'ye index gonderip cekeceksin.
         
         
     }
@@ -47,16 +47,12 @@ final class KisilerService: KisilerServiceProtocol {
 
             do {
                 let cevap = try JSONDecoder().decode(KisiCevap.self, from: data)
-                if let kisiler = cevap.kisiler {
-
-                    for kisi in kisiler {
-
-                        print("kisi ad: \(kisi.kisi_ad!)")
-                    }
-                    response(cevap.kisiler)
-                }
+                  
+                response(cevap.kisiler)
+                
                 
             }catch {
+                response(nil)
                 print(error)
             }
             
